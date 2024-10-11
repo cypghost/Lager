@@ -5,24 +5,29 @@ export default function FAQs() {
   // Array of FAQ items
   const faqs = [
     {
-      question: "What is Nivia Platform Online Advertising?",
+      question: "What is Lager Digital Marketing?",
       answer:
-        "Nivia Platform Online Advertising is an all-in-one platform that provides tools and resources to help you manage and optimize your online ads effectively.",
+        "Lager Digital Marketing is a platform offering digital marketing, dropshipping, and print-on-demand solutions to help businesses and creators grow their online presence.",
+    },
+    {
+      question: "How can graphic designers benefit from your platform?",
+      answer:
+        "Graphic designers can showcase their work on our platform and earn commissions for every sale made using their designs.",
+    },
+    {
+      question: "How can I join your Telegram community?",
+      answer:
+        "You can join our Telegram community by signing up on our website or following the link provided in our contact section.",
+    },
+    {
+      question: "What services do you provide?",
+      answer:
+        "We provide digital marketing, dropshipping, and print-on-demand services. Our upcoming initiatives include community-building and educational courses for aspiring entrepreneurs.",
     },
     {
       question: "How do I get started?",
       answer:
-        "Simply sign up on the platform, choose your plan, and start setting up your campaigns with our easy-to-use dashboard and tutorials.",
-    },
-    {
-      question: "What services do you offer?",
-      answer:
-        "We offer services such as campaign management, analytics, ad creation, and optimization across various online advertising platforms.",
-    },
-    {
-      question: "How can I learn more?",
-      answer:
-        "Visit our Facebook Google Advertising Guides Academy for detailed tutorials and guides. You can also reach out to our support team.",
+        "Simply sign up on our platform, and we'll guide you through the steps to access our services and connect with our community.",
     },
   ];
 
@@ -43,8 +48,7 @@ export default function FAQs() {
           </h1>
           <p className="text-lg lg:text-xl text-gray-600">
             Below you’ll find answers to the most common questions you may have
-            on Nivia Platform Online Advertising. Also, please feel free to
-            check out our Facebook Google Advertising Guides Academy.
+            about Lager Digital Marketing.
           </p>
           <p className="text-lg lg:text-xl text-gray-600">
             If you still can’t find the answer you’re looking for, just{" "}

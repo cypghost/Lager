@@ -5,21 +5,20 @@ import Image from "next/image";
 export default function Feature() {
   const features = [
     {
-      title: "Feature One",
-      description:
-        "This is a brief description of Feature One, highlighting its unique value.",
+      title: "Showcase Your Creativity",
+      description: "Display your designs and earn commissions on every sale.",
       imageUrl: "/placeholder.svg",
     },
     {
-      title: "Feature Two",
+      title: "Global Reach",
       description:
-        "This is a brief description of Feature Two, providing an overview of its benefits.",
+        "Leverage our dropshipping and print-on-demand services to reach customers worldwide.",
       imageUrl: "/placeholder.svg",
     },
     {
-      title: "Feature Three",
+      title: "Community & Growth",
       description:
-        "This is a brief description of Feature Three, explaining why it's beneficial.",
+        "Join our Telegram channel for courses, collaborations, and career opportunities.",
       imageUrl: "/placeholder.svg",
     },
   ];
@@ -31,8 +30,8 @@ export default function Feature() {
           Our Features
         </h1>
         <p className="text-lg lg:text-xl text-gray-600">
-          Discover the powerful features that help streamline your workflow and
-          enhance your business.
+          Explore how Lager Digital Marketing empowers designers and businesses
+          to thrive.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

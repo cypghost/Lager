@@ -5,18 +5,20 @@ export default function HowItWorks() {
   const steps = [
     {
       number: 1,
-      title: "Sign Up",
-      description: "Create an account to get started. It’s quick and easy!",
+      title: "Join Our Telegram Channel",
+      description: "Sign up and become part of our community on Telegram.",
     },
     {
       number: 2,
-      title: "Choose Your Plan",
-      description: "Select a plan that suits your needs and budget.",
+      title: "Stay Updated",
+      description:
+        "Receive updates, participate in discussions, and access exclusive content.",
     },
     {
       number: 3,
-      title: "Start Using the Platform",
-      description: "Access the features and start managing your business.",
+      title: "Engage & Grow",
+      description:
+        "Learn from short courses, showcase your talents, and explore opportunities to collaborate.",
     },
   ];
 
@@ -30,9 +32,9 @@ export default function HowItWorks() {
           Getting Started Is Simple
         </h1>
         <p className="text-lg md:text-xl text-gray-600">
-          Follow these easy steps to get up and running with our platform. It’s
-          designed to be user-friendly and efficient, so you can focus on what
-          matters most.
+          Follow these easy steps to get up and running with our platform.
+          Connect with us on Telegram and take the next step in your
+          professional journey, so you can focus on what matters most.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">

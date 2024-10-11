@@ -7,11 +7,11 @@ export default function CTA() {
       <div className="relative container mx-auto bg-primary flex flex-col lg:flex-row items-center justify-between py-6 lg:py-10 px-12 lg:px-20 rounded-3xl space-y-8 lg:space-y-0 lg:space-x-16 shadow-lg">
         <div className="lg:w-1/2 text-center lg:text-left">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
-            Ready to Take Your Business to the Next Level?
+            Ready to Join Our Community and Grow Your Skills?
           </h2>
           <p className="text-sm sm:text-md lg:text-lg max-w-md mx-auto lg:mx-0">
-            Subscribe to get access to exclusive content, tips, and strategies
-            that will help you grow your business.
+            Subscribe to stay updated on our latest offerings, exclusive
+            resources, and opportunities to connect and learn.
           </p>
         </div>
         <div className="flex flex-col sm:flex-row items-center w-full lg:w-1/2 space-y-4 sm:space-y-0 sm:space-x-4">

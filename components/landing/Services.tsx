@@ -4,21 +4,21 @@ import { FaTools, FaLightbulb, FaRocket } from "react-icons/fa";
 export default function Services() {
   const services = [
     {
-      title: "Development",
+      title: "Design & Branding",
       description:
-        "High-quality development services that build robust and scalable solutions.",
-      icon: <FaTools size={48} />,
-    },
-    {
-      title: "Creative Design",
-      description:
-        "Innovative and engaging designs that communicate your brand’s story.",
+        "Create impactful visual identities that capture your brand’s essence.",
       icon: <FaLightbulb size={48} />,
     },
     {
-      title: "Marketing",
+      title: "Development & Integration",
       description:
-        "Effective marketing strategies to boost your brand’s visibility and reach.",
+        "Build scalable and robust digital solutions to elevate your business.",
+      icon: <FaTools size={48} />,
+    },
+    {
+      title: "Digital Marketing & Strategy",
+      description:
+        "Implement marketing strategies that expand your reach and maximize conversions.",
       icon: <FaRocket size={48} />,
     },
   ];
@@ -30,8 +30,8 @@ export default function Services() {
           Our Services
         </h1>
         <p className="text-lg lg:text-x">
-          We offer a range of services to help your business grow and succeed in
-          today’s digital landscape.
+          Helping your business grow with tailored solutions in design,
+          development, and marketing.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

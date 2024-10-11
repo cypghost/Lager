@@ -25,13 +25,13 @@ export default function about() {
   const mission = [
     {
       icon: <RocketIcon className="w-8 h-8 text-primary" />,
-      title: "Scalable",
-      description: "Our solutions are designed to scale with your business.",
+      title: "Global Reach",
+      description: "connect with audiences worldwide.",
     },
     {
       icon: <BoltIcon className="w-8 h-8 text-primary" />,
-      title: "Efficient",
-      description: "We optimize for speed and performance.",
+      title: "Creator success",
+      description: "Showcase your talent and earn commissions globally.",
     },
   ];
 
@@ -39,17 +39,17 @@ export default function about() {
     {
       icon: <RocketIcon className="w-8 h-8" />,
       title: "Innovative",
-      description: "We stay ahead of the curve with cutting-edge solutions.",
+      description: "Delivering forward-thinking solutions.",
     },
     {
       icon: <BoltIcon className="w-8 h-8" />,
-      title: "Agile",
-      description: "We adapt quickly to changing needs and market conditions.",
+      title: "Adaptive",
+      description: "Quickly adapting to market changes.",
     },
     {
       icon: <UsersIcon className="w-8 h-8" />,
       title: "Collaborative",
-      description: "We work closely with our clients to achieve their goals.",
+      description: "Partnering with clients to reach their goals.",
     },
   ];
 
@@ -122,8 +122,9 @@ export default function about() {
               This is Who We Are
             </h2>
             <p className="px-4 text-lg md:text-2xl text-muted">
-              The true secret of our success lies in the people behind the
-              screen. And with them, our culture.
+              Our success is built on a dedicated team and vibrant community,
+              leveraging creativity and collaboration to help businesses and
+              creators connect, learn, and grow together.
             </p>
             <div className="flex p-4 gap-4 items-center">
               <button className="flex items-center justify-center w-1/2 lg:w-auto px-4 py-3 font-semibold rounded-md bg-primary text-secondary hover:text-accent hover:bg-destructive transition-all duration-300">
@@ -142,13 +143,13 @@ export default function about() {
             </div>
             <div className="border-l-4 md:border-l-8 border-accent pl-4">
               <p className="text-lg md:text-2xl font-medium">
-                We facilitate the creation of strategy, design, and
-                implementation.
+                We offer digital marketing, dropshipping, and print-on-demand
+                solutions, helping designers earn commissions globally.
               </p>
-              <div className="flex items-center justify-center lg:justify-start space-x-8 py-4 px-4 bg-white rounded-3xl shadow-lg">
+              <div className="flex items-center justify-center lg:justify-start space-x-16 lg:space-x-8 py-4 px-4 bg-white rounded-3xl shadow-lg">
                 <AvatarCircles numPeople={999} avatarUrls={avatarUrls} />
                 <p className="text-sm md:text-base text-black w-full lg:w-60">
-                  Join thousands of users in using the Lager platform!
+                  Be a part of a community that fosters growth and creativity.
                 </p>
               </div>
             </div>
@@ -203,14 +204,15 @@ export default function about() {
               Our Mission
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium">
-              Empowering Businesses
+              Empowering Creators
             </h2>
             <p className="text-muted text-lg md:text-xl">
-              Our mission is to empower businesses of all sizes to achieve their
-              goals through innovative solutions and exceptional service.
+              Our mission is to empower businesses and creators globally with
+              innovative digital marketing, dropshipping, and print-on-demand
+              solutions, driving growth and impact.
             </p>
 
-            {/* Feature Cards */}
+            {/* Mission Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {mission.map((feature, index) => (
                 <MissionCard
@@ -227,15 +229,14 @@ export default function about() {
       <section className="px-4 w-full py-12 md:py-24 lg:py-32">
         <div className="container mx-auto space-y-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <h2 className="text-5xl font-medium text-center md:text-left">
-              When you are more prepared, your future will be brighter
+            <h2 className="text-7xl font-medium text-center md:text-left">
+              Prepare Today for a Brighter Tomorrow
             </h2>
-            <div className="text-muted text-xl w-3/4">
+            <div className="text-muted text-2xl w-3/4">
               <p>
-                We believe in a collaborative approach that puts our clients
-                {"'"}
-                needs first. Our team works closely with you to understand your
-                unique challenges and develop tailored solutions.
+                We take a client-first approach, collaborating to understand
+                your unique needs and providing personalized solutions that
+                drive success.
               </p>
             </div>
           </div>
