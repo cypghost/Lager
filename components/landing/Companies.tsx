@@ -16,8 +16,7 @@ const companies = [
 export default function Companies() {
   return (
     <section className="relative w-full py-4">
-      <div className="absolute top-0 left-0 h-full w-16 pointer-events-none z-10"></div>
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden container mx-auto relative">
         <div className="flex items-center justify-center space-x-8 animate-scroll lg:space-x-16 hover:animate-pause">
           {companies.concat(companies).map((logo, index) => (
             <div

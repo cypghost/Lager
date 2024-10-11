@@ -1,8 +1,28 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+
+const answerVariants = {
+  hidden: { opacity: 0, height: 0, marginTop: 0 },
+  visible: {
+    opacity: 1,
+    height: "auto",
+    marginTop: 24,
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 export default function FAQs() {
-  // Array of FAQ items
   const faqs = [
     {
       question: "What is Lager Digital Marketing?",
@@ -31,10 +51,8 @@ export default function FAQs() {
     },
   ];
 
-  // Define the type for the activeIndex state, which is either a number or null
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  // Function to toggle the active index
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -42,7 +60,13 @@ export default function FAQs() {
   return (
     <section className="w-full py-44 px-4 bg-gray-50 text-gray-800">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div className="space-y-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={textVariants}
+          className="space-y-6"
+        >
           <h1 className="text-3xl lg:text-6xl font-bold mb-4">
             Do you have any questions?
           </h1>
@@ -54,31 +78,44 @@ export default function FAQs() {
             If you still can’t find the answer you’re looking for, just{" "}
             <span className="text-primary font-semibold">Contact us</span>.
           </p>
-        </div>
-        <div className="space-y-10">
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+          className="space-y-10"
+        >
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200 pb-8">
+            <motion.div
+              key={index}
+              className="border-b border-gray-200 pb-8"
+              initial="visible"
+              animate={activeIndex === index ? "visible" : "hidden"}
+            >
               <button
                 className="w-full text-left text-lg font-medium text-gray-700"
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
-                <span
-                  className={`float-right transition-transform duration-300 ${
-                    activeIndex === index ? "rotate-180" : "rotate-0"
-                  }`}
+                <motion.span
+                  className="float-right transition-transform duration-300"
+                  animate={{ rotate: activeIndex === index ? 180 : 0 }}
                 >
                   ▼
-                </span>
+                </motion.span>
               </button>
-              {activeIndex === index && (
-                <p className="mt-6 text-gray-600 transition-all duration-300">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
+              <motion.div
+                initial="hidden"
+                animate={activeIndex === index ? "visible" : "hidden"}
+                variants={answerVariants}
+                className="overflow-hidden"
+              >
+                <p className="text-gray-600">{faq.answer}</p>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

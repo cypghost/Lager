@@ -2,16 +2,15 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // Import usePathname hook
+import { usePathname } from "next/navigation";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false); // State to track mounting
-  const pathname = usePathname(); // Get the current pathname
+  const [isMounted, setIsMounted] = useState(false);
+  const pathname = usePathname();
 
-  // Effect to set the isMounted state to true when the component is mounted
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -37,17 +36,14 @@ export default function Navbar() {
     { href: "/Contact", label: "Contact" },
   ];
 
-  // Define classes based on the current route and scroll state
   const baseClasses = `fixed w-full top-0 z-50 transition-all duration-300`;
   const scrolledClassesHome = "bg-muted text-primary shadow-lg";
   const scrolledClassesOtherPages = "bg-white text-secondary shadow-lg";
   const nonScrolledClassesHome = "text-primary bg-transparent";
   const nonScrolledClassesOtherPages = "text-secondary bg-transparent";
 
-  // Use pathname only when the component is mounted to avoid issues
-  const currentPath = isMounted ? pathname : "/"; // Default to '/' before mounting
+  const currentPath = isMounted ? pathname : "/";
 
-  // Set classes based on route and scroll state
   const navbarClasses = `${baseClasses} ${
     currentPath === "/"
       ? isScrolled
@@ -58,7 +54,6 @@ export default function Navbar() {
       : nonScrolledClassesOtherPages
   }`;
 
-  // Avoid rendering the navbar until it is mounted to prevent server/client mismatches
   if (!isMounted) {
     return null;
   }
@@ -66,7 +61,6 @@ export default function Navbar() {
   return (
     <section className={navbarClasses}>
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/Logo.png"
@@ -76,8 +70,6 @@ export default function Navbar() {
             className="rounded-full"
           />
         </Link>
-
-        {/* Desktop Navigation */}
         <ul className="hidden sm:flex justify-between text-2xl font-mono items-center space-x-8">
           {navItems.map((item) => (
             <li key={item.href} className="group">
@@ -106,24 +98,19 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        {/* Mobile Menu Button */}
         <button
           className="sm:hidden flex items-center text-3xl"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <FiX /> : <FiMenu />}{" "}
-          {/* Toggle between open and close icons */}
         </button>
-
-        {/* Mobile Navigation */}
         <div
           className={`${
             isMobileMenuOpen ? "max-h-screen" : "max-h-0"
-          } overflow-hidden transition-all duration-300 sm:hidden fixed top-16 right-0 w-full ${
+          } overflow-hidden transition-all duration-300 sm:hidden fixed top-16 right-0 mt-5 w-full ${
             currentPath === "/"
-              ? "bg-black text-white"
+              ? "bg-muted text-white"
               : "bg-white text-secondary"
           } shadow-lg`}
         >
@@ -133,7 +120,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className="flex items-center text-xl group-hover:text-primary"
-                  onClick={() => setIsMobileMenuOpen(false)} // Close the menu when a link is clicked
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
                   <svg

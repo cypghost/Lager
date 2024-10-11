@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
+import { FaTiktok, FaShopify, FaTelegramPlane } from "react-icons/fa"; // Import new icons
 
 export default function Footer() {
   const footerLinks = useMemo(() => {
@@ -48,7 +49,7 @@ export default function Footer() {
           <div className="w-full lg:w-1/3 space-y-6">
             <div>
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Logo"
                 width={60}
                 height={60}
@@ -125,12 +126,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
-                  <Image
-                    src="/tiktok-icon.png"
-                    alt="TikTok"
-                    width={24}
-                    height={24}
-                  />
+                  <FaTiktok size={24} /> {/* TikTok Icon */}
                 </a>
                 <a
                   href="https://shopify.com"
@@ -138,12 +134,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
-                  <Image
-                    src="/shopify-icon.png"
-                    alt="Shopify"
-                    width={24}
-                    height={24}
-                  />
+                  <FaShopify size={24} /> {/* Shopify Icon */}
                 </a>
                 <a
                   href="https://t.me"
@@ -151,12 +142,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
-                  <Image
-                    src="/telegram-icon.png"
-                    alt="Telegram"
-                    width={24}
-                    height={24}
-                  />
+                  <FaTelegramPlane size={24} /> {/* Telegram Icon */}
                 </a>
               </div>
             </div>
