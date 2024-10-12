@@ -1,17 +1,5 @@
 "use client";
-// import { useState, ChangeEvent, FormEvent } from "react";
-// import { Label } from "@/components/ui/label";
-// import { Input } from "@/components/ui/input";
-// import { Textarea } from "@/components/ui/textarea";
-// import { FiArrowRight } from "react-icons/fi";
-// import Image from "next/image";
 import Link from "next/link";
-
-// interface FormData {
-//   name: string;
-//   email: string;
-//   message: string;
-// }
 
 interface SVGProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
@@ -20,46 +8,6 @@ interface SVGProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export default function Contact() {
-  // const [formData, setFormData] = useState<FormData>({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
-  // const [loading, setLoading] = useState(false);
-
-  // const handleChange = (
-  //   e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => {
-  //   setFormData({ ...formData, [e.target.id]: e.target.value });
-  // };
-
-  // const handleSubmit = async (e: FormEvent) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-
-  //   try {
-  //     const res = await fetch("/api/email", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     if (res.ok) {
-  //       alert("Message sent successfully!");
-  //       setFormData({ name: "", email: "", message: "" });
-  //     } else {
-  //       alert("Failed to send the message.");
-  //     }
-  //   } catch (error) {
-  //     console.error("An error occurred while sending the message:", error);
-  //     alert("An error occurred while sending the message.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   return (
     <div className="w-full p-4 py-16 md:py-24 space-y-12">
       <div className="text-center space-y-4">
@@ -113,13 +61,6 @@ export default function Contact() {
           </div>
         </div>
         <div className="overflow-hidden rounded-2xl">
-          {/* <Image
-            src="/LagerDigitalMarketing.svg"
-            alt="Contact Image"
-            className="w-full h-full object-cover rounded-2xl"
-            width="600"
-            height="400"
-          /> */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49864.68478745068!2d-77.29961409629601!3d38.63639777563836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65593c31c6ffb%3A0x72326e8a35e46e0!2sWoodbridge%2C%20VA%2022191%2C%20USA!5e0!3m2!1sen!2set!4v1728674669794!5m2!1sen!2set"
             width="100%"
@@ -131,66 +72,6 @@ export default function Contact() {
           ></iframe>
         </div>
       </div>
-      {/* <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 py-12">
-        <div className="rounded-2xl overflow-hidden">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49864.68478745068!2d-77.29961409629601!3d38.63639777563836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65593c31c6ffb%3A0x72326e8a35e46e0!2sWoodbridge%2C%20VA%2022191%2C%20USA!5e0!3m2!1sen!2set!4v1728674669794!5m2!1sen!2set"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold">Get in Touch</h2>
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="message">Message</Label>
-              <Textarea
-                id="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                placeholder="Your Message"
-                className="min-h-[120px]"
-              />
-            </div>
-            <button
-              disabled={loading}
-              className="flex items-center justify-center w-full sm:w-auto px-6 py-3 font-semibold rounded-md bg-primary text-secondary hover:text-accent hover:bg-destructive transition-all duration-300"
-            >
-              {loading ? "Sending..." : "Send Message"}
-              {!loading && (
-                <FiArrowRight className="ml-2 animate-bounce" size={20} />
-              )}
-            </button>
-          </form>
-        </div> 
-      </div> */}
     </div>
   );
 }

@@ -1,31 +1,28 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 
-// Animation variants for the section title and description
 const textVariants = {
-  hidden: { opacity: 0, y: 20 }, // Initial state: below and transparent
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }, // Final state: fully visible and at its original position
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
-// Flip animation variants for each step card
 const flipVariants = {
-  hidden: { opacity: 0, rotateY: -90, scale: 0.8 }, // Start rotated and scaled down
+  hidden: { opacity: 0, rotateY: -90, scale: 0.8 },
   visible: {
     opacity: 1,
     rotateY: 0,
     scale: 1,
     transition: { duration: 0.8, ease: "easeOut" },
-  }, // Flip to original position and scale
+  },
 };
 
-// Animation variants for staggered appearance of step cards
 const containerVariants = {
   hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Stagger each step card animation by 0.3 seconds
+      staggerChildren: 0.3,
     },
   },
 };
