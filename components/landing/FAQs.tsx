@@ -79,7 +79,7 @@ export default function FAQs() {
             If you still can’t find the answer you’re looking for, just{" "}
             <Link
               className="text-primary font-semibold hover:text-secondary transition-all"
-              href="mailto:lagerdrop@gmail.com"
+              href="mailto:lagerdigitalmarketing@gmail.com"
             >
               Contact us
             </Link>

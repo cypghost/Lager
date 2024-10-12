@@ -40,10 +40,10 @@ export default function Contact() {
               <div className="bg-primary text-muted p-3 rounded-full">
                 <MailIcon className="h-6 w-6" />
               </div>
-              <Link href="mailto:lagerdrop@gmail.com">
+              <Link href="mailto:lagerdigitalmarketing@gmail.com">
                 <h3 className="text-2xl font-semibold">Email</h3>
                 <p className="text-xl text-muted-foreground">
-                  lagerdrop@gmail.com
+                  lagerdigitalmarketing@gmail.com
                 </p>
               </Link>
             </div>
