@@ -21,7 +21,7 @@ const AvatarCircles = ({
         <Image
           key={index}
           className="h-10 w-10 rounded-full border-2 border-white dark:border-gray-800"
-          src="/placeholder.svg"
+          src={url}
           width={40}
           height={40}
           alt={`Avatar ${index + 1}`}

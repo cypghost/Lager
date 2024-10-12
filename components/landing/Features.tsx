@@ -29,19 +29,19 @@ export default function Feature() {
     {
       title: "Showcase Your Creativity",
       description: "Display your designs and earn commissions on every sale.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/Creativity.png",
     },
     {
       title: "Global Reach",
       description:
         "Leverage our dropshipping and print-on-demand services to reach customers worldwide.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/Global.png",
     },
     {
       title: "Community & Growth",
       description:
         "Join our Telegram channel for courses, collaborations, and career opportunities.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/Community.jpg",
     },
   ];
 

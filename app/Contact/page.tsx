@@ -1,8 +1,17 @@
+"use client";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { FiArrowRight } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 interface SVGProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
@@ -11,6 +20,42 @@ interface SVGProps extends React.SVGProps<SVGSVGElement> {
 }
 
 export default function Contact() {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send the message.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while sending the message.");
+    }
+  };
+
   return (
     <div className="w-full p-4 py-16 md:py-24 space-y-12">
       <div className="text-center space-y-4">
@@ -21,8 +66,8 @@ export default function Contact() {
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 p-8 border shadow-lg rounded-lg">
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold">How Can We Help?</h2>
-          <p className="text-muted-foreground">
+          <h2 className="text-5xl font-bold">How Can We Help?</h2>
+          <p className="text-2xl text-muted-foreground">
             Our team is here to assist you with any questions or concerns you
             may have. Feel free to reach out to us using the contact form or by
             visiting our office.
@@ -32,73 +77,90 @@ export default function Contact() {
               <div className="bg-primary text-muted p-3 rounded-full">
                 <PhoneIcon className="h-6 w-6" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold">Phone</h3>
-                <p className="text-muted-foreground">+1 (555) 123-4567</p>
-              </div>
+              <Link href="tel:+15713538818">
+                <h3 className="text-2xl font-semibold">Phone</h3>
+                <p className="text-xl text-muted-foreground">
+                  +1 (571) 353-8818
+                </p>
+              </Link>
             </div>
             <div className="flex items-start gap-4">
               <div className="bg-primary text-muted p-3 rounded-full">
                 <MailIcon className="h-6 w-6" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold">Email</h3>
-                <p className="text-muted-foreground">info@example.com</p>
-              </div>
+              <Link href="mailto:lagerdrop@gmail.com">
+                <h3 className="text-2xl font-semibold">Email</h3>
+                <p className="text-xl text-muted-foreground">
+                  lagerdrop@gmail.com
+                </p>
+              </Link>
             </div>
             <div className="flex items-start gap-4">
               <div className="bg-primary text-muted p-3 rounded-full">
                 <LocateIcon className="h-6 w-6" />
               </div>
-              <div>
-                <h3 className="text-xl font-semibold">Address</h3>
-                <p className="text-muted-foreground">
-                  123 Main Street, Anytown USA
+              <Link href="https://maps.app.goo.gl/ZbR2aBbQgK8Z7YGZ8">
+                <h3 className="text-2xl font-semibold">Address</h3>
+                <p className="text-xl text-muted-foreground">
+                  Woodbridge, VA United States
                 </p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
         <div className="overflow-hidden rounded-2xl">
           <Image
-            src="/placeholder.svg"
+            src="/LagerDigitalMarketing.svg"
             alt="Contact Image"
             className="w-full h-full object-cover rounded-2xl"
             width="600"
             height="400"
-            style={{ objectFit: "cover" }}
           />
         </div>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 py-12">
         <div className="rounded-2xl overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8351288872545!2d-122.42022568467937!3d37.77493537975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080a8d6c1b1%3A0x2a00c5b28c6e78c2!2sVercel%20HQ!5e0!3m2!1sen!2sus!4v1682874400000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49864.68478745068!2d-77.29961409629601!3d38.63639777563836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65593c31c6ffb%3A0x72326e8a35e46e0!2sWoodbridge%2C%20VA%2022191%2C%20USA!5e0!3m2!1sen!2set!4v1728674669794!5m2!1sen!2set"
             width="100%"
             height="400"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          />
+          ></iframe>
         </div>
         <div className="space-y-6">
           <h2 className="text-3xl font-bold">Get in Touch</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
-                <Input id="name" type="text" placeholder="Your Name" />
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="Your Email" />
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">Message</Label>
               <Textarea
                 id="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows={4}
                 placeholder="Your Message"
                 className="min-h-[120px]"

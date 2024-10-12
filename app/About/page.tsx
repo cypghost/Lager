@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import AvatarCircles from "@/components/ui/avatar-circles";
 import { FiArrowRight } from "react-icons/fi";
 import MissionCard from "@/components/About/MissionCard";
@@ -55,31 +54,30 @@ export default function about() {
 
   const offices = [
     {
-      location: "New York",
-      address: "123 Main St, New York, NY 10001",
+      location: "Virginia",
+      address: "Woodbridge VA, USA",
       hours: "Mon - Fri: 9:00 AM - 5:00 PM",
-      contactLink: "/contact",
-    },
-    {
-      location: "San Francisco",
-      address: "456 Market St, San Francisco, CA 94103",
-      hours: "Mon - Fri: 9:00 AM - 5:00 PM",
-      contactLink: "/contact",
-    },
-    {
-      location: "London",
-      address: "789 Oxford St, London, UK W1C 2JZ",
-      hours: "Mon - Fri: 9:00 AM - 5:00 PM",
-      contactLink: "/contact",
+      contactLink: "https://maps.app.goo.gl/J5G21rSN7VXBBXLRA",
     },
   ];
 
   const teamMembers = [
     {
-      name: "John Doe",
+      name: "Biruk Kefiyalew",
+      role: "Owner",
+      avatar: "/placeholder.svg",
+      initials: "BK",
+      socials: {
+        linkedin: "https://linkedin.com",
+        twitter: "https://twitter.com",
+        facebook: "https://facebook.com",
+      },
+    },
+    {
+      name: "Nahom Haileselassie",
       role: "CEO",
       avatar: "/placeholder.svg",
-      initials: "JD",
+      initials: "NH",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -87,21 +85,10 @@ export default function about() {
       },
     },
     {
-      name: "Sarah Miller",
-      role: "CTO",
+      name: "Biruk Mesfin",
+      role: "Team Leader",
       avatar: "/placeholder.svg",
-      initials: "SM",
-      socials: {
-        linkedin: "https://linkedin.com",
-        twitter: "https://twitter.com",
-        facebook: "https://facebook.com",
-      },
-    },
-    {
-      name: "Kate Lee",
-      role: "COO",
-      avatar: "/placeholder.svg",
-      initials: "KL",
+      initials: "BM",
       socials: {
         linkedin: "https://linkedin.com",
         twitter: "https://twitter.com",
@@ -127,18 +114,12 @@ export default function about() {
               creators connect, learn, and grow together.
             </p>
             <div className="flex p-4 gap-4 items-center">
-              <button className="flex items-center justify-center w-1/2 lg:w-auto px-4 py-3 font-semibold rounded-md bg-primary text-secondary hover:text-accent hover:bg-destructive transition-all duration-300">
-                Subscribe
-                <FiArrowRight className="ml-2 animate-bounce" size={20} />
-              </button>
               <Link
-                href=""
-                className="flex items-center gap-x-4 font-semibold hover:text-accent transition-all duration-300"
+                href="https://t.me/+qZPRwmmIZZA1YWIx"
+                className="flex items-center justify-center w-1/2 lg:w-auto px-4 py-3 font-semibold rounded-md bg-primary text-secondary hover:text-accent hover:bg-destructive transition-all duration-300"
               >
-                <div className="flex items-center justify-center px-4 py-4 rounded-full border border-primary text-primary bg-secondary">
-                  <FiArrowRight className="-rotate-45" size={25} />
-                </div>
-                Learn More
+                Join Our Community
+                <FiArrowRight className="ml-2 animate-bounce" size={20} />
               </Link>
             </div>
             <div className="border-l-4 md:border-l-8 border-accent pl-4">
@@ -160,17 +141,8 @@ export default function about() {
               clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
             }}
           >
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <Button
-                variant="ghost"
-                size="lg"
-                className="rounded-full px-8 py-14 bg-primary"
-              >
-                <PlayIcon className="w-12 h-12 rounded-full text-secondary" />
-              </Button>
-            </div>
             <Image
-              src="/placeholder.svg"
+              src="/WhoWeAre.png"
               alt="About Us"
               className="w-full h-full object-cover"
               width="800"
@@ -190,7 +162,7 @@ export default function about() {
             }}
           >
             <Image
-              src="/placeholder.svg"
+              src="/Empower.jpg"
               alt="About Us"
               className="w-full h-full object-cover"
               width={800}
@@ -198,8 +170,7 @@ export default function about() {
               style={{ objectFit: "cover" }}
             />
           </div>
-
-          <div className="pl-4 lg:pl-16 space-y-6">
+          <div className="pl-4 lg:pl-16 space-y-6" id="mission">
             <div className="px-4 py-2 bg-black text-white rounded-full border-2 border-primary inline-block">
               Our Mission
             </div>
@@ -211,8 +182,6 @@ export default function about() {
               innovative digital marketing, dropshipping, and print-on-demand
               solutions, driving growth and impact.
             </p>
-
-            {/* Mission Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {mission.map((feature, index) => (
                 <MissionCard
@@ -269,7 +238,7 @@ export default function about() {
         </div>
       </section>
       <section className="px-4 w-full py-12 md:py-24 lg:py-32">
-        <div className="container">
+        <div className="container mx-auto" id="team">
           <h2 className="text-4xl font-bold mb-8">Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
@@ -298,25 +267,6 @@ function BoltIcon(props: SVGProps) {
     >
       <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
       <circle cx="12" cy="12" r="4" />
-    </svg>
-  );
-}
-
-function PlayIcon(props: SVGProps) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polygon points="6 3 20 12 6 21 6 3" />
     </svg>
   );
 }

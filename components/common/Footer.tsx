@@ -10,24 +10,24 @@ export default function Footer() {
       {
         title: "About",
         links: [
-          { href: "/about", label: "About Us" },
-          { href: "/team", label: "Our Team" },
-          { href: "/careers", label: "Careers" },
+          { href: "/About", label: "About Us" },
+          { href: "/About/#team", label: "Our Team" },
+          { href: "/About/#mission", label: "Our Mission" },
         ],
       },
       {
         title: "Services",
         links: [
-          { href: "/services/marketing", label: "Digital Marketing" },
-          { href: "/services/ecommerce", label: "E-commerce Solutions" },
-          { href: "/services/design", label: "Design & Branding" },
+          { href: "/#service", label: "Digital Marketing" },
+          { href: "/#service", label: "E-commerce Solutions" },
+          { href: "/#service", label: "Design & Branding" },
         ],
       },
       {
         title: "Support",
         links: [
-          { href: "/support/faq", label: "FAQs" },
-          { href: "/support/contact", label: "Contact Support" },
+          { href: "#faq", label: "FAQs" },
+          { href: "/Contact", label: "Contact Support" },
           { href: "/support/shipping", label: "Shipping Information" },
         ],
       },
@@ -58,7 +58,12 @@ export default function Footer() {
             </div>
             <address className="not-italic">
               <h3 className="font-bold text-lg">Location</h3>
-              <p className="text-accent">1234 Main Street, City, Country</p>
+              <Link
+                href="https://maps.app.goo.gl/ZbR2aBbQgK8Z7YGZ8"
+                className="text-accent"
+              >
+                Woodbride VA, USA
+              </Link>
             </address>
             <div>
               <h3 className="font-bold text-lg">Open Hours</h3>
@@ -104,51 +109,50 @@ export default function Footer() {
             <div className="flex flex-col items-start space-y-4">
               <h3 className="font-bold text-left text-lg">Follow Us</h3>
               <div className="flex space-x-4">
-                <a
-                  href="https://facebook.com"
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61564729805943&mibextid=LQQJ4d"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
                   <FiFacebook size={24} />
-                </a>
-                <a
-                  href="https://instagram.com"
+                </Link>
+                <Link
+                  href="https://www.instagram.com/lagerdrop_us?igsh=MThzY2F0YmRkbWxscw%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
                   <FiInstagram size={24} />
-                </a>
-                <a
-                  href="https://tiktok.com"
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@lager_store1?_t=8pHLtvyvg5r&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
                   <FaTiktok size={24} /> {/* TikTok Icon */}
-                </a>
-                <a
-                  href="https://shopify.com"
+                </Link>
+                <Link
+                  href="https://lagerstore.us/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
                   <FaShopify size={24} /> {/* Shopify Icon */}
-                </a>
-                <a
-                  href="https://t.me"
+                </Link>
+                <Link
+                  href="https://t.me/+qZPRwmmIZZA1YWIx"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:text-primary transition-all"
                 >
                   <FaTelegramPlane size={24} /> {/* Telegram Icon */}
-                </a>
+                </Link>
               </div>
             </div>
             <div className="text-center lg:text-left lg:ml-auto text-accent">
-              &copy; {new Date().getFullYear()} Your Company. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Lager. All rights reserved.
             </div>
           </div>
         </div>

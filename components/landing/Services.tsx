@@ -62,6 +62,7 @@ export default function Services() {
         "Create impactful visual identities that capture your brand’s essence.",
       icon: <FaLightbulb size={48} />,
       variant: leftSlide,
+      id: "design",
     },
     {
       title: "Development & Integration",
@@ -69,6 +70,7 @@ export default function Services() {
         "Build scalable and robust digital solutions to elevate your business.",
       icon: <FaTools size={48} />,
       variant: rightSlide,
+      id: "ecommerce",
     },
     {
       title: "Digital Marketing & Strategy",
@@ -76,11 +78,15 @@ export default function Services() {
         "Implement marketing strategies that expand your reach and maximize conversions.",
       icon: <FaRocket size={48} />,
       variant: rotateIn,
+      id: "marketing",
     },
   ];
 
   return (
-    <section className="py-16 px-4 lg:px-16 bg-muted text-zinc-500 w-full">
+    <section
+      className="py-16 px-4 lg:px-16 bg-muted text-zinc-500 w-full"
+      id="service"
+    >
       <div className="container mx-auto">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-12"

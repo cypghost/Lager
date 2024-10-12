@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const answerVariants = {
   hidden: { opacity: 0, height: 0, marginTop: 0 },
@@ -76,7 +77,13 @@ export default function FAQs() {
           </p>
           <p className="text-lg lg:text-xl text-gray-600">
             If you still can’t find the answer you’re looking for, just{" "}
-            <span className="text-primary font-semibold">Contact us</span>.
+            <Link
+              className="text-primary font-semibold hover:text-secondary transition-all"
+              href="mailto:lagerdrop@gmail.com"
+            >
+              Contact us
+            </Link>
+            .
           </p>
         </motion.div>
         <motion.div

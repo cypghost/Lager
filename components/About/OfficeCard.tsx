@@ -26,7 +26,6 @@ const LocationIcon = () => (
   </svg>
 );
 
-// OfficeCard Component
 export default function OfficeCard({
   location,
   address,

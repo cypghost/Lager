@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import AvatarCircles from "@/components/ui/avatar-circles";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const avatarUrls = [
   "https://avatars.githubusercontent.com/u/16860528",
@@ -27,6 +28,7 @@ export default function Hero() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeIn}
+            className="space-y-2"
           >
             <h1 className="text-3xl md:text-5xl lg:text-8xl font-bold leading-tight">
               Empower. Create. Grow with{" "}
@@ -44,8 +46,8 @@ export default function Hero() {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeIn}
           >
-            <Button className="px-6 py-3 md:px-8 md:py-4 bg-primary text-black font-semibold rounded-lg hover:bg-accent transition-all">
-              Get Started
+            <Button className="px-6 py-3 md:px-8 md:py-6 bg-primary text-black font-semibold rounded-lg hover:bg-accent transition-all">
+              <Link href="https://t.me/+qZPRwmmIZZA1YWIx">Get Started</Link>
             </Button>
           </motion.div>
           <motion.div
