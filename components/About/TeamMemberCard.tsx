@@ -1,6 +1,6 @@
 import React from "react";
 // import { FiLinkedin, FiTwitter, FiFacebook } from "react-icons/fi";
-import Image from "next/image";
+// import Image from "next/image";
 // import Link from "next/link";
 
 interface Socials {
@@ -43,12 +43,12 @@ interface TeamMemberCardProps {
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   name,
   role,
-  avatar,
+  // avatar,
   // socials,
 }) => {
   return (
     <div className="p-4 text-center bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="w-full h-48 md:h-64 lg:h-80 rounded-lg overflow-hidden">
+      {/* <div className="w-full h-48 md:h-64 lg:h-80 rounded-lg overflow-hidden">
         <Image
           src={avatar}
           alt={name}
@@ -56,7 +56,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           height={400}
           className="object-cover w-full h-full"
         />
-      </div>
+      </div> */}
       <div className="p-6 flex flex-col items-center justify-center space-y-4">
         <h3 className="text-2xl font-semibold mt-2">{name}</h3>
         <p className="text-muted-foreground">{role}</p>

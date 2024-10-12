@@ -38,17 +38,17 @@ export default function FAQs() {
     {
       question: "How can I join your Telegram community?",
       answer:
-        "You can join our Telegram community by signing up on our website or following the link provided in our contact section.",
+        "You can join our Telegram community by connecting with us through our social media channels across the website.",
     },
     {
       question: "What services do you provide?",
       answer:
-        "We provide digital marketing, dropshipping, and print-on-demand services. Our upcoming initiatives include community-building and educational courses for aspiring entrepreneurs.",
+        "We provide digital marketing, dropshipping, and print-on-demand services. Our upcoming initiatives include community-building and bringing success.",
     },
     {
       question: "How do I get started?",
       answer:
-        "Simply sign up on our platform, and we'll guide you through the steps to access our services and connect with our community.",
+        "Simply Join our community, and we'll guide you through the steps to access our services.",
     },
   ];
 
