@@ -14,12 +14,14 @@ export default function Contact() {
         <div className="inline-block px-4 py-2 rounded-full text-secondary bg-primary transition-all duration-300">
           Contact Us
         </div>
-        <p className="text-4xl md:text-6xl font-medium">Get in Touch</p>
+        <p className="text-3xl md:text-4xl lg:text-6xl font-medium">
+          Get in Touch
+        </p>
       </div>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 p-8 border shadow-lg rounded-lg">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 p-6 lg:p-8 border shadow-lg rounded-lg">
         <div className="space-y-6">
-          <h2 className="text-5xl font-bold">How Can We Help?</h2>
-          <p className="text-2xl text-muted-foreground">
+          <h2 className="text-2xl lg:text-4xl font-bold">How Can We Help?</h2>
+          <p className="text-base md:text-lg lg:text-xl text-muted-foreground">
             Our team is here to assist you with any questions or concerns you
             may have. Feel free to reach out to us using the contact form or by
             visiting our office.
@@ -29,9 +31,11 @@ export default function Contact() {
               <div className="bg-primary text-muted p-3 rounded-full">
                 <PhoneIcon className="h-6 w-6" />
               </div>
-              <Link href="tel:+15713538818">
-                <h3 className="text-2xl font-semibold">Phone</h3>
-                <p className="text-xl text-muted-foreground">
+              <Link href="tel:+15713538818" className="block">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold">
+                  Phone
+                </h3>
+                <p className="text-md md:text-lg lg:text-xl text-muted-foreground">
                   +1 (571) 353-8818
                 </p>
               </Link>
@@ -40,9 +44,14 @@ export default function Contact() {
               <div className="bg-primary text-muted p-3 rounded-full">
                 <MailIcon className="h-6 w-6" />
               </div>
-              <Link href="mailto:lagerdigitalmarketing@gmail.com">
-                <h3 className="text-2xl font-semibold">Email</h3>
-                <p className="text-xl text-muted-foreground">
+              <Link
+                href="mailto:lagerdigitalmarketing@gmail.com"
+                className="block"
+              >
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold">
+                  Email
+                </h3>
+                <p className="text-md md:text-lg lg:text-xl text-muted-foreground">
                   lagerdigitalmarketing@gmail.com
                 </p>
               </Link>
@@ -51,10 +60,15 @@ export default function Contact() {
               <div className="bg-primary text-muted p-3 rounded-full">
                 <LocateIcon className="h-6 w-6" />
               </div>
-              <Link href="https://maps.app.goo.gl/ZbR2aBbQgK8Z7YGZ8">
-                <h3 className="text-2xl font-semibold">Address</h3>
-                <p className="text-xl text-muted-foreground">
-                  Woodbridge, VA United States
+              <Link
+                href="https://maps.app.goo.gl/9RWbrGSkAAoK4Da58"
+                className="block"
+              >
+                <h3 className="text-lg md:text-xl lg:text-2xl font-semibold">
+                  Address
+                </h3>
+                <p className="text-md md:text-lg lg:text-xl text-muted-foreground">
+                  Washington DC, USA
                 </p>
               </Link>
             </div>
@@ -62,7 +76,7 @@ export default function Contact() {
         </div>
         <div className="overflow-hidden rounded-2xl">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49864.68478745068!2d-77.29961409629601!3d38.63639777563836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b65593c31c6ffb%3A0x72326e8a35e46e0!2sWoodbridge%2C%20VA%2022191%2C%20USA!5e0!3m2!1sen!2set!4v1728674669794!5m2!1sen!2set"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99370.29950629403!2d-77.01457599999996!3d38.89375449999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c6de5af6e45b%3A0xc2524522d4885d2a!2sWashington%2C%20DC%2C%20USA!5e0!3m2!1sen!2set!4v1728958943612!5m2!1sen!2set"
             width="100%"
             height="400"
             style={{ border: 0 }}

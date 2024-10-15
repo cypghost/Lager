@@ -21,7 +21,7 @@ const fadeIn = {
 export default function Hero() {
   return (
     <section className="w-full text-white flex flex-col items-start bg-muted overflow-hidden">
-      <div className="container lg:min-h-screen mx-auto flex flex-col items-start justify-between space-y-12 lg:space-y-0 py-24 lg:py-32">
+      <div className="container lg:min-h-screen mx-auto flex items-start justify-between py-24 lg:py-32">
         <div className="flex flex-col space-y-6 xl:w-1/2 text-left items-start px-4">
           <motion.div
             initial="hidden"
@@ -63,18 +63,20 @@ export default function Hero() {
             </p>
           </motion.div>
         </div>
-        <div className="hidden w-full lg:w-1/2 xl:flex justify-end overflow-hidden">
+        <div className="hidden w-full xl:w-[60%] xl:flex justify-end overflow-hidden">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeIn}
-            className="absolute bottom-0 left-[45%] top-32 w-[56%] 2xl:w-[55%] h-[75%] 2xl:h-[80%]"
+            className="w-full h-auto"
           >
             <Image
               src="/hero.png"
               alt="Lager Platform"
-              layout="fill"
+              width={1200}
+              height={1000}
+              layout="responsive"
               objectFit="cover"
               objectPosition="right center"
             />

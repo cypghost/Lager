@@ -54,10 +54,10 @@ export default function about() {
 
   const offices = [
     {
-      location: "Virginia",
-      address: "Woodbridge VA, USA",
+      location: "Washington",
+      address: "Washington DC, USA",
       hours: "Mon - Fri: 9:00 AM - 5:00 PM",
-      contactLink: "https://maps.app.goo.gl/J5G21rSN7VXBBXLRA",
+      contactLink: "https://maps.app.goo.gl/9RWbrGSkAAoK4Da58",
     },
   ];
 
@@ -116,7 +116,7 @@ export default function about() {
             <div className="flex p-4 gap-4 items-center">
               <Link
                 href="https://t.me/+qZPRwmmIZZA1YWIx"
-                className="flex items-center justify-center w-1/2 lg:w-auto px-4 py-3 font-semibold rounded-md bg-primary text-secondary hover:text-accent hover:bg-destructive transition-all duration-300"
+                className="flex items-center justify-center w-auto px-4 py-3 font-semibold rounded-md bg-primary text-secondary hover:text-accent hover:bg-destructive transition-all duration-300"
               >
                 Join Our Community
                 <FiArrowRight className="ml-2 animate-bounce" size={20} />

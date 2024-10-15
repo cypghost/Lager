@@ -76,10 +76,10 @@ export default function Footer() {
             <address className="not-italic">
               <h3 className="font-bold text-lg">Location</h3>
               <Link
-                href="https://maps.app.goo.gl/ZbR2aBbQgK8Z7YGZ8"
+                href="https://maps.app.goo.gl/9RWbrGSkAAoK4Da58"
                 className="text-accent"
               >
-                Woodbride VA, USA
+                Washington DC, USA
               </Link>
             </address>
             <div>
@@ -88,7 +88,7 @@ export default function Footer() {
               <p className="text-accent">Sat - Sun: Closed</p>
             </div>
           </div>
-          <nav className="w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <nav className="w-full lg:w-2/3 grid grid-cols-2 xl:grid-cols-4 gap-8">
             {footerLinks.map((section, index) => (
               <div key={index}>
                 <h3 className="font-bold text-lg">{section.title}</h3>

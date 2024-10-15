@@ -17,36 +17,29 @@ const containerVariants = {
 
 const socialMediaLinks = [
   {
-    icon: <FaTiktok size={48} />,
+    icon: <FaTiktok size={36} />,
     href: "https://www.tiktok.com/@lager_store1?_t=8pHLtvyvg5r&_r=1",
     label: "TikTok",
-    position: "top-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
   },
   {
-    icon: <FiInstagram size={48} />,
+    icon: <FiInstagram size={36} />,
     href: "https://www.instagram.com/lagerdrop_us?igsh=MThzY2F0YmRkbWxscw%3D%3D&utm_source=qr",
     label: "Instagram",
-    position: "top-6 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
   },
   {
-    icon: <FaTelegramPlane size={48} />,
+    icon: <FaTelegramPlane size={36} />,
     href: "https://t.me/+qZPRwmmIZZA1YWIx",
     label: "Telegram",
-    position: "bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
   },
   {
-    icon: <FaShopify size={48} />,
+    icon: <FaShopify size={36} />,
     href: "https://lagerstore.us/",
     label: "Shopify",
-    position:
-      "top-28 left-12 md:left-14 lg:left-1/3 transform -translate-x-1/2 -translate-y-1/2",
   },
   {
-    icon: <FiFacebook size={48} />,
+    icon: <FiFacebook size={36} />,
     href: "https://www.facebook.com/profile.php?id=61564729805943&mibextid=LQQJ4d",
     label: "Facebook",
-    position:
-      "top-28 left-60 md:left-64 lg:left-2/3 transform -translate-x-1/2 -translate-y-1/2",
   },
 ];
 
@@ -57,9 +50,9 @@ export default function CTA() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
-      className="relative py-8 px-4 sm:py-12 sm:px-8 lg:py-16 lg:px-16 bg-gray-100 rounded-lg overflow-hidden text-destructive w-full"
+      className="relative py-8 px-4 sm:py-12 sm:px-8 lg:py-16 lg:px-16 bg-primary rounded-lg overflow-hidden text-destructive w-full"
     >
-      <div className="relative container mx-auto bg-primary flex flex-col md:flex-row items-center justify-between py-6 lg:py-10 px-12 lg:px-20 rounded-3xl space-y-8 lg:space-y-0 lg:space-x-16 shadow-lg">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 lg:space-y-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -75,14 +68,16 @@ export default function CTA() {
             resources, and opportunities to connect and learn.
           </p>
         </motion.div>
-        <div className="relative w-full lg:w-1/2 h-64">
+
+        {/* Social Media Icons */}
+        <div className="flex flex-wrap justify-center lg:justify-end gap-6 lg:gap-8 w-full lg:w-1/2">
           {socialMediaLinks.map((link, index) => (
             <Link
               key={index}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`absolute text-muted hover:text-white transition-all ${link.position}`}
+              className="text-muted hover:text-white transition-all"
               aria-label={link.label}
             >
               {link.icon}
