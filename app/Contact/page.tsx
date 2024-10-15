@@ -51,7 +51,7 @@ export default function Contact() {
                 <h3 className="text-lg md:text-xl lg:text-2xl font-semibold">
                   Email
                 </h3>
-                <p className="text-md md:text-lg lg:text-xl text-muted-foreground">
+                <p className="text-md md:text-lg lg:text-xl text-muted-foreground w-auto">
                   lagerdigitalmarketing@gmail.com
                 </p>
               </Link>
