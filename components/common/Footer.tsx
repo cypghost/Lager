@@ -108,7 +108,7 @@ export default function Footer() {
             ))}
             <div className="flex flex-col items-start space-y-4">
               <h3 className="font-bold text-lg">{socialLinks.title}</h3>
-              <div className="flex space-x-4">
+              <div className="grid grid-cols-3 gap-4 lg:gap-0 lg:flex lg:space-x-4">
                 {socialLinks.links.map((link, idx) => (
                   <Link
                     href={link.href}
