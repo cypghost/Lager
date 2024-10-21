@@ -41,7 +41,7 @@ export default function Feature() {
       title: "Community & Growth",
       description:
         "Join our Telegram channel for courses, collaborations, and career opportunities.",
-      imageUrl: "/Community.jpg",
+      imageUrl: "/Community.png",
     },
   ];
 
@@ -84,7 +84,7 @@ export default function Feature() {
               className="bg-white rounded-3xl shadow-xl overflow-hidden transform transition-all hover:scale-105 duration-300 p-6"
               variants={cardVariants}
             >
-              <div className="relative w-full h-64">
+              <div className="relative w-full h-80">
                 <Image
                   src={feature.imageUrl}
                   alt={feature.title}

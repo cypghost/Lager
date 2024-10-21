@@ -137,17 +137,17 @@ export default function about() {
           </div>
           <div
             className="relative w-full h-[50vh] md:h-[60vh] lg:h-[90vh] overflow-hidden pb-10 lg:pb-0"
-            style={{
-              clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
-            }}
+            // style={{
+            //   clipPath: "polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 50%)",
+            // }}
           >
             <Image
               src="/WhoWeAre.png"
               alt="About Us"
               className="w-full h-full object-cover"
               width="800"
-              height="480"
-              style={{ objectFit: "cover" }}
+              height="450"
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>
@@ -155,14 +155,14 @@ export default function about() {
       <section className="w-full px-4 py-12 md:py-0">
         <div className="container mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 items-center gap-12">
           <div
-            className="relative w-full lg:w-[117%] h-[50vh] md:h-[60vh] overflow-hidden -ml-0 lg:-ml-20"
-            style={{
-              clipPath:
-                "polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%)",
-            }}
+            className="relative w-full h-[50vh] md:h-[80vh] overflow-hidden"
+            // style={{
+            //   clipPath:
+            //     "polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%)",
+            // }}
           >
             <Image
-              src="/Empower.jpg"
+              src="/Empower.png"
               alt="About Us"
               className="w-full h-full object-cover"
               width={800}

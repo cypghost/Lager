@@ -69,7 +69,7 @@ export default function Hero() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeIn}
-            className="w-full h-auto"
+            className="w-full h-auto mt-10"
           >
             <Image
               src="/hero.png"
