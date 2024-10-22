@@ -48,7 +48,8 @@ export default function Hero() {
           >
             <Button className="px-6 py-3 md:px-8 md:py-6 bg-primary text-black font-semibold rounded-lg hover:bg-accent transition-all">
               {/* <Link href="https://t.me/+qZPRwmmIZZA1YWIx">Get Started</Link> */}
-              <Link href="https://tally.so/r/3j9aZa">Get Started</Link>
+              {/* <Link href="https://tally.so/r/3j9aZa">Get Started</Link> */}
+              <Link href="/Apply">Get Started</Link>
             </Button>
           </motion.div>
           <motion.div

@@ -42,7 +42,8 @@ export default function Navbar() {
   const nonScrolledClassesHome = "text-primary bg-transparent";
   const nonScrolledClassesOtherPages = "text-secondary bg-transparent";
 
-  const currentPath = isMounted ? pathname : "/";
+  const currentPath =
+    isMounted && (pathname === "/" || pathname === "/Apply") ? "/" : pathname;
 
   const navbarClasses = `${baseClasses} ${
     currentPath === "/"
@@ -109,7 +110,7 @@ export default function Navbar() {
           className={`${
             isMobileMenuOpen ? "max-h-screen" : "max-h-0"
           } overflow-hidden transition-all duration-300 sm:hidden fixed top-16 right-0 mt-5 w-full ${
-            currentPath === "/"
+            currentPath === "/" || pathname === "/Apply"
               ? "bg-muted text-white"
               : "bg-white text-secondary"
           } shadow-lg`}
