@@ -17,7 +17,7 @@ export default function JobApplicationForm() {
         id="tally-js"
         src="https://tally.so/widgets/embed.js"
         onLoad={() => {
-          // @ts-ignore
+          // @ts-expect-error I am expecting error
           Tally?.loadEmbeds();
         }}
       />
