@@ -18,6 +18,45 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Lager Digital Marketing",
   description: "Welcome to Lager Digital Marketing",
+  metadataBase: new URL("https://lagerdigitalmarketing.com"),
+  openGraph: {
+    siteName: "Lager Digital Marketing",
+    type: "website",
+    locale: "en_US",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: "index, follow",
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": "https://lagerdigitalmarketing.com/rss.xml",
+    },
+  },
+  applicationName: "Lager Digital Marketing",
+  appleWebApp: {
+    title: "Lager Digital Marketing",
+    statusBarStyle: "default",
+    capable: true,
+  },
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+    ],
+    shortcut: [
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
